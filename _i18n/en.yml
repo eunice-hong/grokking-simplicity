@@ -1,0 +1,10 @@
+global:
+  about: About
+  twitter: Twitter
+
+langs:
+  ko: 한국어
+  en: English
+
+titles:
+  pagination: Page

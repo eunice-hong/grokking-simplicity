@@ -2,12 +2,18 @@ title: grokking simplicity notes
 email: dev@eunice-hong.com
 description: >-
   Notes on grokking simplicity
-baseurl: ""
+
 plugins:
-  - jekyll-feed
-relative_links:
-  enabled: true
-  collections: true
-include:
-  - README.md
-theme: minima
+  - jekyll-multiple-languages-plugin
+
+baseurl: ""
+permalink: /:title/
+
+languages: [ "ko", "en" ]
+defaultLang: ko
+languageNames:
+  ko: 한국어
+  en: English
+
+exclude: [ "404.html", "README.md", "about.markdown" ]
+exclude_from_localizations: [ "javascript", "images", "css", "scripts", "favicon.ico", "assets" ]
