@@ -1,7 +1,6 @@
 global:
   about: 소개
   github: 깃허브
-  tagline: 예제 사이트 설정 중!
 
 langs:
   ko: 한국어

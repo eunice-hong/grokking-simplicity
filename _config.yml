@@ -6,7 +6,7 @@ description: >-
 plugins:
   - jekyll-multiple-languages-plugin
 
-baseurl: ""
+baseurl: /grokking-simplicity
 permalink: /:title/
 
 languages: [ "ko", "en" ]
@@ -15,5 +15,5 @@ languageNames:
   ko: 한국어
   en: English
 
-exclude: [ "404.html", "README.md", "about.markdown" ]
+exclude: [ "404.html", "README.md", "about.markdown", "package.json", "src", "node_modules", "vendor/bundle" ]
 exclude_from_localizations: [ "javascript", "images", "css", "scripts", "favicon.ico", "assets" ]
