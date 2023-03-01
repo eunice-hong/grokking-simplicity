@@ -257,7 +257,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll-multiple-languages-plugin (~> 1.8.0)
+  jekyll-multiple-languages-plugin
 
 BUNDLED WITH
    2.1.4
