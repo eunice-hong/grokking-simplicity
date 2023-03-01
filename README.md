@@ -2,6 +2,8 @@
 # [grokking-simplicity][official-site]
 쏙쏙 들어오는 함수형 코딩 - 심플한 코드로 복잡한 소프트웨어 길들이기 학습 노트
 
+👉 Go to [eunice-hong.github.io/grokking-simplicity](https://eunice-hong.github.io/grokking-simplicity)
+
 ### [CHAPTER 1 쏙쏙 들어오는 함수형 코딩에 오신 것을 환영합니다][under-construction]
 
 ### [CHAPTER 2 현실에서의 함수형 사고][under-construction]
