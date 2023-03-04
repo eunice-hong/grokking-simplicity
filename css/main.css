@@ -24,6 +24,10 @@ body {
   overflow: hidden;
 }
 
+h1 {
+  line-height: normal;
+}
+
 a {
   color: #8085C1;
   text-decoration: none;
