@@ -42,11 +42,11 @@ ___Notes from Grokking Simplicity - Level up with functional programming.___
 
 <br>
 
-#### CHAPTER 8 Stratified design: Part 1
+#### CHAPTER 8 Stratified design - Part 1
 
 <br>
 
-#### CHAPTER 9 Stratified design: Part 2
+#### CHAPTER 9 Stratified design - Part 2
 
 <br>
 <br>
