@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>CHAPTER 2 현실에서의 함수형 사고</title>
+    <meta content="width=device-width" name="viewport">
+
+    <!-- syntax highlighting CSS -->
+    <link href="/grokking-simplicity/css/syntax.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/grokking-simplicity/css/main.css" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="/grokking-simplicity/css/responsive.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet'
+          type='text/css'>
+</head>
+<body>
+<div class="site">
+    <div class="sidebar" id="sidebar">
+        <div class="header">
+            
+            <h3 class="title"><a href="/grokking-simplicity/">쏙쏙 들어오는 함수형 코딩</a></h3>
+            
+        </div>
+        <div class="posts">
+            <ul class="posts-list">
+                
+                <li class="post-link">
+                    <a class="post-title" href="/grokking-simplicity/chapter-03/">
+                        CHAPTER 3 액션과 계산, 데이터의 차이를 알기
+                    </a>
+                </li>
+                
+                <li class="post-link">
+                    <a class="post-title" href="/grokking-simplicity/chapter-02/">
+                        CHAPTER 2 현실에서의 함수형 사고
+                    </a>
+                </li>
+                
+                <li class="post-link">
+                    <a class="post-title" href="/grokking-simplicity/chapter-01/">
+                        CHAPTER 1 쏙쏙 들어오는 함수형 코딩에 오신 것을 환영합니다.
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="footer">
+          <span id="footer-links">
+            <a class="footer-link" href="/grokking-simplicity/about">소개</a> <span
+                  class="separator">&bull;</span>
+            <a class="footer-link" href="">깃허브</a>
+          </span>
+        </div>
+        <h3 id="푸터">푸터</h3>
+
+<p>이것은 번역된 푸터입니다!</p>
+
+        <br/>
+        <a class="link-ko" href="/grokking-simplicity/">ko</a>
+        <a class="link-en" href="/grokking-simplicity/en/">en</a>
+    </div>
+
+    <div class="content" id="home">
+    <div id="sidebar-button">
+        <img src="/grokking-simplicity/images/sidebar-button.png">
+    </div>
+    <div id="post-info">
+        <div id="cover-photo-container">
+        </div>
+        <div id="info-container">
+            <h1 id="title">CHAPTER 2 현실에서의 함수형 사고</h1>
+        </div>
+    </div>
+
+    <div class="post">
+        <div align="right">
+            <!-- Adds links to other languages on the post -->
+            
+            
+            
+            
+            
+            <a href="/grokking-simplicity/en/chapter-02/">English</a>
+            
+
+            
+
+            
+
+            
+            
+        </div>
+        <br>
+
+        <p>Chapter 2 에서는 토니의 피자가게 이야기를 통해 현실에서 함수형 사고를 어떻게 적용할 수 있는지 알아보겠습니다.</p>
+
+<p>토니는 모든 것이 소프트웨어로 만들어진 2118년에 피자가게를 운영하고 있습니다. 최근 피자가게의 매출이 좋아 토니는 사업 확장을 계획하고 있습니다. 토니는 코드를 변경할 때 드는 비용을 줄이려면, 함수형 사고로 코드를 짜는 것이 좋다고 알고 있습니다. 그래서 먼저 토니는 피자가게와 관련된 코드를 액션, 계산, 데이터로 분류했습니다.</p>
+
+<ul>
+  <li>액션: 반죽 펴기, 피자 배달, 재료 주문 등</li>
+  <li>계산: 조리법에 나온 것을 두배로 만들기, 재료 주문 목록 결정 등</li>
+  <li>데이터: 조리법, 고객 주문, 영수증 등</li>
+</ul>
+
+<p>그 다음, 토니는 코드를 변경 가능성을 기준으로 다음과 같이 계층화하였습니다. 토니는 <strong><em>계층형 설계</em></strong>로 코드를 비즈니스 규칙, 도메인 규칙, 기술 스택 계층으로 나누었습니다.</p>
+
+<p><img src="https://drek4537l1klr.cloudfront.net/normand/Figures/f0020-01.jpg" alt="Organizing code by “rate of change”" width="500" /></p>
+
+<p>토니네 피자가게는 로봇 하나로 피자를 만들고 있습니다. 토니는 로봇을 하나에서 셋으로 늘려, 피자를 더 빠르게 많이 만들고 싶습니다. 로봇은 다음과 같은 순서로 피자를 만듭니다.</p>
+
+<p><img src="https://drek4537l1klr.cloudfront.net/normand/Figures/f0021-01.jpg" alt="As applied to a robotic kitchen" width="500" /></p>
+
+<p>위 <strong><em>타임라인 다이어그램</em></strong>으로 나타낸 피자 만드는 업무를 세 로봇이 나누어 수행한다고 가정해보겠습니다. 초기에 재료를 마련하는 부분은 분담하여 진행할 수 있겠네요.</p>
+
+<p><img src="https://drek4537l1klr.cloudfront.net/normand/Figures/f0022-01.jpg" alt="Timelines visualize distributed systems" width="500" /></p>
+
+<p>하지만 피자를 만드는 과정에서는 로봇들이 서로 협력해야 합니다. 로봇 A가 피자를 만들기 위해 재료를 준비하고 있을 때, 로봇 B가 재료를 가져가려고 하면 어떻게 될까요? 로봇 A가 재료를 준비하는 과정에서 로봇 B가 재료를 가져가려고 하면, 로봇 A는 작업을 중단하고 로봇 B에게 다 준비되지 않은 재료를 줍니다. 그러면 안되겠죠.</p>
+
+<p>이런 상황에서 사용할 수 있는 것이 <strong><em>타임라인 커팅</em></strong>입니다. 모든 재료를 모은 후 시작해야하는 작업인 ‘반죽 만들기’를 시작하기 전에 모든 로봇은 작업을 마쳐야합니다. 타임라인 다이어그램으로는 이렇게 나타 낼 수 있겠네요.</p>
+
+<p><img src="https://drek4537l1klr.cloudfront.net/normand/Figures/f0025-02.jpg" alt="Cutting the timeline" width="500" /></p>
+
+<p>타임라인 커팅을 이용해 필수 선행작업이 어떤 것인지, 어떤 작업자들과 협업해야하는지 확인할 수 있습니다.</p>
+
+<p>위에서 다뤄진 계층화 설계는 8장과 9장에서, 타임라인 다이어그램을 그리는 방법은 15장에서, 타임라인 커팅에 대한 더 자세한 내용은 17장에서 다룰 예정입니다.</p>
+
+
+        <br>
+    </div>
+</div>
+
+</div>
+<script src="/grokking-simplicity/scripts/responsive.js" type="text/javascript"></script>
+</body>
+</html>
